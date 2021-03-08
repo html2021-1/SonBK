@@ -1,0 +1,105 @@
+#pcheader {
+  -webkit-transition: all 0.8s cubic-bezier(0.8, 0, 0.33, 1);
+  -moz-transition: all 0.8s cubic-bezier(0.8, 0, 0.33, 1);
+  -o-transition: all 0.8s cubic-bezier(0.8, 0, 0.33, 1);
+  transition: all 0.8s cubic-bezier(0.8, 0, 0.33, 1);
+  -webkit-transform: translate(-200px, 0);
+  -moz-transform: translate(-200px, 0);
+  -o-transform: translate(-200px, 0);
+  -ms-transform: translate(-200px, 0);
+  transform: translate(-200px, 0);
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background: #ffffff;
+  z-index: 4; }
+  #pcheader.on {
+    -webkit-transform: translate(0px, 0);
+    -moz-transform: translate(0px, 0);
+    -o-transform: translate(0px, 0);
+    -ms-transform: translate(0px, 0);
+    transform: translate(0px, 0);
+    background: rgba(255, 255, 255, 0.95); }
+  #pcheader #gnb {
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    z-index: 10;
+    width: 30px;
+    cursor: pointer; }
+    #pcheader #gnb .line {
+      -webkit-transition: all 0.7s cubic-bezier(0.9, 0, 0.33, 1);
+      -moz-transition: all 0.7s cubic-bezier(0.9, 0, 0.33, 1);
+      -o-transition: all 0.7s cubic-bezier(0.9, 0, 0.33, 1);
+      transition: all 0.7s cubic-bezier(0.9, 0, 0.33, 1);
+      width: 30px;
+      height: 2px;
+      margin: 5px 0;
+      background: #333; }
+    #pcheader #gnb .line1.Cross {
+      transform: rotate(45deg) translateY(10px);
+      background: rgba(0, 0, 0, 0.6); }
+    #pcheader #gnb .line2.Fadeout {
+      transform: translate(30px);
+      opacity: 0; }
+    #pcheader #gnb .line3.Cross {
+      transform: rotate(-45deg) translateY(-10px);
+      background: rgba(0, 0, 0, 0.6); }
+  #pcheader nav {
+    border-right: 1px solid #333; }
+    #pcheader nav #pcnav {
+      -webkit-transition: all 0.9s cubic-bezier(0.9, 0, 0.33, 1);
+      -moz-transition: all 0.9s cubic-bezier(0.9, 0, 0.33, 1);
+      -o-transition: all 0.9s cubic-bezier(0.9, 0, 0.33, 1);
+      transition: all 0.9s cubic-bezier(0.9, 0, 0.33, 1);
+      position: absolute;
+      right: 0;
+      top: 50px;
+      display: flex;
+      width: 80%;
+      height: 80%;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      transform: translateX(0px); }
+      #pcheader nav #pcnav.fadeIn {
+        opacity: 1;
+        transform: translateX(0px); }
+      #pcheader nav #pcnav li {
+        -webkit-transition: all 0.3s cubic-bezier(0.9, 0, 0.33, 1);
+        -moz-transition: all 0.3s cubic-bezier(0.9, 0, 0.33, 1);
+        -o-transition: all 0.3s cubic-bezier(0.9, 0, 0.33, 1);
+        transition: all 0.3s cubic-bezier(0.9, 0, 0.33, 1);
+        position: relative;
+        font-weight: 700;
+        color: #3b3b3b;
+        margin: 30px 0; }
+        #pcheader nav #pcnav li a {
+          display: inline-block;
+          width: 200px;
+          height: 36px; }
+          #pcheader nav #pcnav li a span {
+            -webkit-background-size: cover !important;
+            -moz-background-size: cover !important;
+            background-size: cover !important;
+            position: absolute;
+            top: 0px;
+            right: 7px;
+            display: inline-block;
+            background: url(../images/common/idcard.png) no-repeat center;
+            width: 35px;
+            height: 35px;
+            opacity: 1; }
+          #pcheader nav #pcnav li a .nav_img2 {
+            background: url(../images/common/skills.png) no-repeat center; }
+          #pcheader nav #pcnav li a .nav_img3 {
+            background: url(../images/common/work.png) no-repeat center; }
+          #pcheader nav #pcnav li a .nav_img4 {
+            background: url(../images/common/access.png) no-repeat center; }
+          #pcheader nav #pcnav li a .nav_img5 {
+            background: url(../images/common/contact.png) no-repeat center; }
+
+/*# sourceMappingURL=layout.css.map */

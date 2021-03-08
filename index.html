@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title> 손병규 portfolio </title>
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/fullpage.min.js"></script>
+  <script src="./js/timer.js"></script>
+  <script src="./js/common.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#fullpage').fullpage({
+	      menu: '#pcnav',
+        anchors: ['AboutMe', 'Skill', 'Work', 'Accessibility', 'Contact'],
+        sectionsColor: ['transparent', '#000000', 'coral', 'grey', 'blue'],
+        onLeave: function (origin, destination, direction) {
+            /* 현재 구역을 떠나서 새로운 구역으로 이동하는 와중에 실행되는 이벤트
+            origin : 출발구역
+            destination : 목적지 구역
+            direction : 스크롤 방향에 따라 up, down
+
+            출발구역의 인덱스 번호 origin.index (0부터 카운트)
+
+            본문2 출발해서 본문 1으로 이동, up방향일 경우 배경 비디오 태그 실행시키기
+            */
+            if (origin.index === 1 && destination.index === 0 && direction === 'up') {
+              $('#main_video').get(0).play();
+            }
+          },
+      })
+    
+      // About me 버튼을 클릭하면 배경 비디오 태그 실행시키기
+      $('#pcnav li').eq(0).children().on('click', function () {
+        $('#main_video').get(0).play();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="pcheader">
+      <div id="gnb">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+      <nav>
+        <ul class="clearfix" id="pcnav">
+          <li class="dep1" data-menuanchor="AboutMe" class="active">
+            <a href="#AboutMe">
+              <strong>A</strong>bout me<br>저를 소개합니다
+              <span class="nav_img1" tabindex="-1"></span>
+            </a>
+          </li>
+          <li class="dep2" data-menuanchor="Skill">
+            <a href="#Skill">
+              <strong>S</strong>kill<br>작업스킬
+              <span class="nav_img2" tabindex="-1"></span>
+            </a>
+          </li>
+          <li class="dep3" data-menuanchor="Work">
+            <a href="#Work">
+              <strong>W</strong>ork<br>작업물
+              <span class="nav_img3" tabindex="-1"></span>
+            </a>
+          </li>
+          <li class="dep4" data-menuanchor="Accessibility">
+            <a href="#Accessibility">
+              <strong>A</strong>ccessibillity<br>웹 접근성
+              <span class="nav_img4" tabindex="-1"></span>
+            </a>
+          </li>
+          <li class="dep5" data-menuanchor="Contact">
+            <a href="#Contact">
+              <strong>C</strong>ontact<br>연락처
+              <span class="nav_img5" tabindex="-1"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="fullpage">
+      <section class="section" id="cnt1">
+        <div id="first_txt_box">
+          <h2 class="blind">손병규 portfolio main page</h2>
+          <h1>WINDOW OF <br> COMMUNICATION </h1>
+          <p class="main_intro">소통의 창을 만드는 퍼블리셔 손병규 입니다</p>
+          <div id="realTime" class="">TUE 20:20:20</div>
+        </div>
+        <div id="main_visual">
+          <div class="window"></div>
+          <video id="main_video" poster="" autoplay muted loop>
+            <source src="./video/skyline 1.mp4" type="video/mp4">
+            <source src="./video/skyline 1.webn" type="video/webn">
+            <source src="./video/skyline 1.ogg" type="video/ogg">
+          </video>
+        </div>
+      </section>
+      <section class="section" id="cnt2">
+        <div id="left">
+          <h2 class="blind">손병규 자기소개</h2>
+          <div id="second_txt_box">
+            <h1>CREATE <br> COMMUNICATION</h1>
+            <h3 class="sub_title">기업과 고객의 긍정적인 소통의 창을 만들고자 합니다.</h3>
+            <p class="intro_txt">저는 퍼블리셔 입니다.<br>기업과 고객의 원활한 소통을 잇고자 합니다. <br> 고객의 니즈를 확인하여 다양한 고객층을 저격하여 흥미를 돋구고<br>
+              수요를 만들고자 합니다. 이러한 '소통'을 쉽게 만들기 위해'소통의 창'<br>을 제작하여 더욱 쉽게 고객들에게 다가가며 기업으로서는 효과적인 이익을<br> 만들고자 합니다</p>
+          </div>
+          <div id="skill_box">
+            <div class="icon_box1">
+              <div class="photo">
+                <img src="./images/skill icon/illustration_cc_2020 copy.png" alt="">
+              </div>
+              <div class="gr_bar">
+                <span>80%</span>
+              </div>
+            </div>
+
+            <div class="icon_box1">
+              <div class="photo">
+                <img src="./images/skill icon/unnamed.png" alt="">
+              </div>
+              <div class="gr_bar">
+                <span>80%</span>
+              </div>
+            </div>
+            <div class="icon_box1">
+              <div class="photo">
+                <img src="./images/skill icon/html5 .png" alt="">
+              </div>
+              <div class="gr_bar">
+                <span>80%</span>
+              </div>
+            </div>
+            <div class="icon_box1">
+              <div class="photo">
+                <img src="./images/skill icon/css.png" alt="">
+              </div>
+              <div class="gr_bar">
+                <span>80%</span>
+              </div>
+            </div>
+            <div class="icon_box1">
+              <div class="photo">
+                <img src="./images/skill icon/jquery_plain_wordmark_logo_icon_146445.png" alt="">
+              </div>
+              <div class="gr_bar">
+                <span>80%</span>
+              </div>
+            </div>
+            <div class="icon_box1">
+              <div class="photo">
+                <img src="./images/skill icon/java.png" alt="">
+              </div>
+              <div class="gr_bar">
+                <span>80%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div id="img_modal"></div>
+          <div class="selfi_box"></div>
+        </div>
+      </section>
+      <section class="section" id="cnt3">
+        <h1>본문3</h1>
+      </section>
+      <section class="section" id="cnt4">
+        <h1>본문4</h1>
+      </section>
+      <section class="section" id="cnt5">
+        <h1>본문5</h1>
+      </section>
+    </div>
+</body>
+
+</html>

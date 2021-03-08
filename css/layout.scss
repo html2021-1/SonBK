@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import  "_mixin";
+
+// header
+#pcheader{
+  @include transition(all 0.8s cubic-bezier(.8, 0, .33, 1));
+  @include transform(translate(-200px, 0));
+  position: fixed;overflow: hidden;top: 0;left: 0;height: 100%;width: 260px;background: #ffffff;z-index: 4;
+  &.on{
+    @include transform(translate(0px, 0));
+    background: rgba(255, 255, 255, 0.95);
+  }
+  #gnb{
+    position: absolute;top: 10px;right: 17px;z-index: 10;width: 30px;cursor: pointer;
+    .line{
+      @include transition(all 0.7s cubic-bezier(.9, 0, .33, 1));
+      width: 30px;height: 2px;margin: 5px 0;background: #333;
+    };
+    .line1.Cross{transform: rotate(45deg) translateY(10px); background: rgba(0,0,0,0.6);}
+    .line2.Fadeout{transform: translate(30px);opacity: 0;}
+    .line3.Cross{transform: rotate(-45deg) translateY(-10px);background: rgba(0,0,0,0.6);}
+  };
+  nav{
+    border-right: 1px solid #333;
+    #pcnav{
+      @include transition(all 0.9s cubic-bezier(.9, 0, .33, 1));
+      position: absolute;right: 0;top: 50px;display:flex;width: 80%;height: 80%;flex-direction: column;align-items:flex-start;text-align: left;transform: translateX(0px);
+      &.fadeIn{
+        opacity: 1;transform: translateX(0px);
+      };
+      li{
+        @include transition(all 0.3s cubic-bezier(.9, 0, .33, 1));
+        position: relative;font-weight: 700;color: #3b3b3b;margin: 30px 0;
+        a {
+          display: inline-block;width: 200px;height: 36px;
+          span{
+            @include bgsize(cover);
+            position: absolute;top: 0px;right: 7px;display: inline-block;background: url(../images/common/idcard.png) no-repeat center;width: 35px;height: 35px;opacity: 1;
+          };
+          .nav_img2{
+            background: url(../images/common/skills.png) no-repeat center;
+          };
+          .nav_img3{
+            background: url(../images/common/work.png) no-repeat center;
+          };
+          .nav_img4{
+            background: url(../images/common/access.png) no-repeat center;
+          };
+          .nav_img5{
+            background: url(../images/common/contact.png) no-repeat center;
+          };
+        }
+      };
+    };
+  };
+}
